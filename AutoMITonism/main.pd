@@ -26,7 +26,7 @@
 #X msg 177 62 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 418 s SAVE-S;
@@ -2298,7 +2298,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -2352,7 +2352,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -3600,7 +3600,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -4193,7 +4193,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -4627,7 +4627,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -6613,37 +6613,43 @@ and send to the name of the module \, for example [s basic-osc];
 #X floatatom 19 158 5 0 0 1 CPU% CPU -;
 #X obj 19 117 bng 15 250 50 0 open-reset-warning! empty <--RESET! 17
 7 0 10 -262144 -1 -1;
-#X obj 516 544 maestro4 2;
-#X floatatom 545 304 5 0 0 0 - - -;
-#X obj 535 202 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 200 1;
-#X obj 532 222 / 127;
-#X obj 603 248 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 300 1;
-#X obj 340 224 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
-#X msg 340 244 link \$1;
-#X obj 133 395 sampler 1;
-#X floatatom 346 152 5 0 0 0 - - -;
-#X floatatom 669 316 5 0 0 0 - - -;
-#X obj 600 268 expr (floor($f1/8)+1) / 16;
-#X obj 355 120 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 512 351 wave-sampler 1;
-#X obj 434 111 manual-triggers 1;
-#X msg 373 399 open;
+#X obj 408 731 maestro4 2;
+#X obj 621 256 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 618 276 / 127;
+#X obj 661 283 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 5900 1;
+#X floatatom 658 316 5 0 0 0 - - -;
+#X obj 658 295 expr (floor($f1/8)+1) / 16;
+#X obj 158 263 manual-triggers 1;
 #X obj 660 13 basic-lfo 1;
-#X connect 12 0 23 1;
-#X connect 13 0 14 0;
-#X connect 14 0 23 2;
-#X connect 15 0 21 0;
-#X connect 16 0 17 0;
-#X connect 17 0 23 0;
-#X connect 20 0 23 3;
-#X connect 21 0 20 0;
-#X connect 22 0 19 0;
-#X connect 23 0 11 0;
-#X connect 24 0 23 0;
-#X connect 25 0 23 0;
-#X connect 26 1 23 1;
-#X connect 26 4 23 0;
+#X obj 766 137 scope;
+#X obj 314 392 scope;
+#X obj 420 535 wave-sampler 1;
+#X obj 354 81 8steps 1;
+#X obj 323 -10 clock 1;
+#X obj 655 164 expr~ $v1>0.01;
+#X obj 459 297 /~ 4;
+#X obj 854 263 16steps 1;
+#X msg 570 320 0;
+#X obj 773 483 karplus 1;
+#X obj 760 623 lp-filter 1;
+#X obj 752 737 vintageverb 1;
+#X obj 670 360 clock-multiply 1;
+#X connect 12 0 13 0;
+#X connect 14 0 16 0;
+#X connect 16 0 15 0;
+#X connect 18 1 26 3;
+#X connect 18 2 19 0;
+#X connect 18 2 24 0;
+#X connect 21 0 11 0;
+#X connect 21 1 31 0;
+#X connect 22 1 20 0;
+#X connect 22 1 25 0;
+#X connect 25 0 21 2;
+#X connect 26 0 28 2;
+#X connect 28 0 29 0;
+#X connect 29 0 30 0;
+#X connect 30 0 11 2;
+#X connect 31 0 26 0;
+#X connect 31 0 28 0;
