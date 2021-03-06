@@ -13,6 +13,6 @@ In addition, the possibility exists to modify the library to improve parameter s
 
 ## Changes
 
-16steps - added
-pd303 - now receives load messages to directly set sequence presets
-wave-sampler - added
+* 16steps - added
+* pd303 - now receives load messages to directly set sequence presets
+* wave-sampler - added
