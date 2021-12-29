@@ -1,7 +1,7 @@
 #N canvas 817 42 863 891 10;
 #X obj 108 13 inlet~;
 #X obj 201 143 vsl 32 28 0 127 0 1 \$0-cartesian-s4a-s \$0-cartesian-s4a-r
-4a 1 3 0 10 -262144 -1 -1 0 1;
+4a 1 3 0 10 -262144 -1 -1 1636 1;
 #X obj 132 128 cnv 5 5 5 empty empty CARTESIAN 0 0 0 12 -262144 -66577
 0;
 #X obj 989 28 inlet~;
@@ -1684,35 +1684,35 @@
 #X text 336 312 curStep;
 #X obj 372 193 + 1;
 #X obj 169 143 vsl 32 28 0 127 0 1 \$0-cartesian-s3a-s \$0-cartesian-s3a-r
-3a 1 3 0 10 -262144 -1 -1 2373 1;
+3a 1 3 0 10 -262144 -1 -1 736 1;
 #X obj 137 143 vsl 32 28 0 127 0 1 \$0-cartesian-s2a-s \$0-cartesian-s2a-r
-2a 1 3 0 10 -262144 -1 -1 2236 1;
+2a 1 3 0 10 -262144 -1 -1 1800 1;
 #X obj 105 143 vsl 32 28 0 127 0 1 \$0-cartesian-s1a-s \$0-cartesian-s1a-r
-1a 1 3 0 10 -262144 -1 -1 2018 1;
+1a 1 3 0 10 -262144 -1 -1 164 1;
 #X obj 105 176 vsl 32 28 0 127 0 1 \$0-cartesian-s1b-s \$0-cartesian-s1b-r
-1b 1 3 0 10 -262144 -1 -1 0 1;
+1b 1 3 0 10 -262144 -1 -1 82 1;
 #X obj 201 176 vsl 32 28 0 127 0 1 \$0-cartesian-s4b-s \$0-cartesian-s4b-r
-4b 1 3 0 10 -262144 -1 -1 0 1;
+4b 1 3 0 10 -262144 -1 -1 191 1;
 #X obj 169 176 vsl 32 28 0 127 0 1 \$0-cartesian-s3b-s \$0-cartesian-s3b-r
-3b 1 3 0 10 -262144 -1 -1 0 1;
+3b 1 3 0 10 -262144 -1 -1 382 1;
 #X obj 137 176 vsl 32 28 0 127 0 1 \$0-cartesian-s2b-s \$0-cartesian-s2b-r
 2b 1 3 0 10 -262144 -1 -1 0 1;
 #X obj 201 209 vsl 32 28 0 127 0 1 \$0-cartesian-s4c-s \$0-cartesian-s4c-r
-4c 1 3 0 10 -262144 -1 -1 0 1;
+4c 1 3 0 10 -262144 -1 -1 55 1;
 #X obj 169 209 vsl 32 28 0 127 0 1 \$0-cartesian-s3c-s \$0-cartesian-s3c-r
-3c 1 3 0 10 -262144 -1 -1 0 1;
+3c 1 3 0 10 -262144 -1 -1 409 1;
 #X obj 137 209 vsl 32 28 0 127 0 1 \$0-cartesian-s2c-s \$0-cartesian-s2c-r
-2c 1 3 0 10 -262144 -1 -1 0 1;
+2c 1 3 0 10 -262144 -1 -1 709 1;
 #X obj 105 209 vsl 32 28 0 127 0 1 \$0-cartesian-s1c-s \$0-cartesian-s1c-r
-1c 1 3 0 10 -262144 -1 -1 0 1;
+1c 1 3 0 10 -262144 -1 -1 55 1;
 #X obj 105 242 vsl 32 28 0 127 0 1 \$0-cartesian-s1d-s \$0-cartesian-s1d-r
-1d 1 3 0 10 -262144 -1 -1 0 1;
+1d 1 3 0 10 -262144 -1 -1 82 1;
 #X obj 201 242 vsl 32 28 0 127 0 1 \$0-cartesian-s4d-s \$0-cartesian-s4d-r
-4d 1 3 0 10 -262144 -1 -1 1855 1;
+4d 1 3 0 10 -262144 -1 -1 1773 1;
 #X obj 169 242 vsl 32 28 0 127 0 1 \$0-cartesian-s3d-s \$0-cartesian-s3d-r
-3d 1 3 0 10 -262144 -1 -1 2373 1;
+3d 1 3 0 10 -262144 -1 -1 191 1;
 #X obj 137 242 vsl 32 28 0 127 0 1 \$0-cartesian-s2d-s \$0-cartesian-s2d-r
-2d 1 3 0 10 -262144 -1 -1 0 1;
+2d 1 3 0 10 -262144 -1 -1 1336 1;
 #X obj 129 166 bng 8 100 100 0 empty \$0cartesianStep0 empty 17 7 0
 10 -262144 -4034 -1;
 #X text 106 -6 NEXT;
@@ -1928,7 +1928,7 @@
 #X obj 183 107 cnv 5 5 5 empty empty Y 0 0 0 8 -262144 -226533 0;
 #X floatatom 205 304 5 0 0 0 - - -;
 #X obj 238 131 vsl 32 100 0 127 0 0 empty empty alpha 0 -9 0 10 -262144
--1 -1 400 1;
+-1 -1 200 1;
 #N canvas 0 22 1086 884 sendAlpha 0;
 #X obj 162 140 expr $i1%4 + 1;
 #X obj 254 142 expr floor($i1/4);
@@ -2043,9 +2043,9 @@
 #X obj 569 95 * 127;
 #X obj 569 116 change;
 #X obj 274 131 vsl 32 100 0 127 0 0 empty empty beta 0 -9 0 10 -262144
--1 -1 9600 1;
+-1 -1 3500 1;
 #X obj 310 131 vsl 32 100 0 127 0 0 empty empty gamma 0 -9 0 10 -262144
--1 -1 3800 1;
+-1 -1 8300 1;
 #N canvas 0 22 988 892 sendBeta 0;
 #X obj 25 21 inlet;
 #X obj 303 23 inlet;
@@ -2243,8 +2243,8 @@
 #X msg 420 348 zero;
 #X msg 330 347 zero;
 #X msg 235 347 zero;
-#X msg 444 349 rand;
-#X msg 348 350 rand;
+#X msg 462 347 rand;
+#X msg 364 348 rand;
 #X msg 265 352 rand;
 #X obj 244 259 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
