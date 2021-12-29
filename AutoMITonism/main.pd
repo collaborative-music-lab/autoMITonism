@@ -1,6 +1,6 @@
-#N canvas 0 23 970 855 10;
+#N canvas 317 23 970 855 10;
 #X declare -path patch_editor_abs;
-#X obj 16 983 declare -path patch_editor_abs;
+#X obj 27 1114 declare -path patch_editor_abs;
 #N canvas 447 23 707 551 patch-editor-do-not-delete 0;
 #X msg 26 128 \; pd dsp 0;
 #X obj 26 34 loadbang;
@@ -782,7 +782,7 @@
 #X msg 177 62 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
+-262144 -1 -1 2 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 418 s SAVE-S;
@@ -2732,7 +2732,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -3220,7 +3220,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -3654,7 +3654,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -3708,7 +3708,7 @@
 #X msg 177 81 0;
 #X msg 83 341 \; pd-main.pd obj 200 200 \$1 \$2;
 #X obj 162 280 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 64 387 t b b;
 #X msg 64 509 loadbang;
 #X obj 91 411 s SAVE-S;
@@ -6596,8 +6596,8 @@ and send to the name of the module \, for example [s basic-osc];
 #X connect 19 0 18 0;
 #X connect 22 0 10 0;
 #X connect 23 0 4 0;
-#X restore 16 1004 pd patch-editor-do-not-delete;
-#X text 28 967 DO NOT DELETE THESE OBJECTS:;
+#X restore 27 1135 pd patch-editor-do-not-delete;
+#X text 39 1098 DO NOT DELETE THESE OBJECTS:;
 #X obj 18 14 cnv 5 5 5 empty empty AUTOMATONISM 0 12 0 15 -262144 -66577
 0;
 #X obj 19 40 bng 15 250 50 0 open-quick-guide! empty <--QUICK-GUIDE
@@ -6613,43 +6613,66 @@ and send to the name of the module \, for example [s basic-osc];
 #X floatatom 19 158 5 0 0 1 CPU% CPU -;
 #X obj 19 117 bng 15 250 50 0 open-reset-warning! empty <--RESET! 17
 7 0 10 -262144 -1 -1;
-#X obj 408 731 maestro4 2;
-#X obj 621 256 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 618 276 / 127;
-#X obj 661 283 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5900 1;
-#X floatatom 658 316 5 0 0 0 - - -;
-#X obj 658 295 expr (floor($f1/8)+1) / 16;
-#X obj 158 263 manual-triggers 1;
-#X obj 660 13 basic-lfo 1;
-#X obj 766 137 scope;
-#X obj 314 392 scope;
-#X obj 420 535 wave-sampler 1;
-#X obj 354 81 8steps 1;
-#X obj 323 -10 clock 1;
-#X obj 655 164 expr~ $v1>0.01;
-#X obj 459 297 /~ 4;
+#X obj 464 1047 maestro4 2;
+#X obj 441 109 manual-triggers 1;
+#X obj 902 22 basic-lfo 1;
+#X obj 993 136 scope;
+#X obj 441 190 wave-sampler 1;
+#X obj 29 283 clock 1;
 #X obj 854 263 16steps 1;
-#X msg 570 320 0;
 #X obj 773 483 karplus 1;
-#X obj 760 623 lp-filter 1;
-#X obj 752 737 vintageverb 1;
-#X obj 670 360 clock-multiply 1;
-#X connect 12 0 13 0;
-#X connect 14 0 16 0;
-#X connect 16 0 15 0;
-#X connect 18 1 26 3;
-#X connect 18 2 19 0;
-#X connect 18 2 24 0;
-#X connect 21 0 11 0;
-#X connect 21 1 31 0;
-#X connect 22 1 20 0;
-#X connect 22 1 25 0;
-#X connect 25 0 21 2;
-#X connect 26 0 28 2;
-#X connect 28 0 29 0;
-#X connect 29 0 30 0;
-#X connect 30 0 11 2;
-#X connect 31 0 26 0;
-#X connect 31 0 28 0;
+#X obj 770 620 lp-filter 1;
+#X obj 763 770 vintageverb 1;
+#X obj 622 375 clock-multiply 1;
+#X obj 79 567 cartesian;
+#X obj 78 775 quantizer 12;
+#X obj 468 737 mixer4 1;
+#X obj 559 865 vca 45;
+#X obj 76 862 basic-osc 23;
+#X obj 76 979 LP-FILTER 3;
+#X obj 500 629 snapshot~;
+#X obj 501 600 metro 50;
+#X obj 500 575 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X floatatom 500 650 5 0 0 0 - - -;
+#X obj 119 375 clock-divider-even 1;
+#X obj 278 1059 vca 23;
+#X obj 300 857 decay 1;
+#X obj 284 376 clock-divider-odd 1;
+#X obj 149 470 clock-divider-odd;
+#X connect 12 0 15 0;
+#X connect 13 1 17 3;
+#X connect 13 2 14 0;
+#X connect 15 0 24 0;
+#X connect 15 1 21 0;
+#X connect 16 0 32 0;
+#X connect 16 0 35 0;
+#X connect 17 0 18 2;
+#X connect 18 0 19 0;
+#X connect 19 0 24 1;
+#X connect 20 0 11 4;
+#X connect 20 1 11 6;
+#X connect 21 0 17 0;
+#X connect 21 0 18 0;
+#X connect 22 0 23 0;
+#X connect 22 1 27 1;
+#X connect 22 2 28 0;
+#X connect 22 2 34 1;
+#X connect 23 0 26 0;
+#X connect 24 0 11 0;
+#X connect 24 0 25 0;
+#X connect 25 0 20 0;
+#X connect 26 0 27 0;
+#X connect 27 0 33 0;
+#X connect 28 0 31 0;
+#X connect 29 0 28 0;
+#X connect 30 0 29 0;
+#X connect 32 0 22 1;
+#X connect 32 0 34 0;
+#X connect 32 1 36 0;
+#X connect 33 0 24 2;
+#X connect 34 0 33 1;
+#X connect 35 1 22 2;
+#X connect 35 1 34 0;
+#X connect 36 0 22 0;
+#X connect 36 1 34 0;
