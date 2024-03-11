@@ -14,6 +14,6 @@ In addition, the possibility exists to modify the library to improve parameter s
 ## Changes
 
 * 16steps - extension to 8-steps, with receives to set sequencer values remotely
-* pd303 - now receives load messages to directly set sequence presets
+* pd-303 - now receives load messages to directly set sequence presets
 * wave-sampler - load a sample and flexible change loop points (even preserving pitch, kinda)
 * cartesian - cartesian sequencer (similar to make noise rené or NE mutatis digitalis)
